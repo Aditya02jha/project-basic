@@ -12,10 +12,10 @@ pipeline {
             steps {
                 bat '''
                 if exist "C:\\deployment\\my-website" (
-                    rd /S /Q "C:\\inetpub\\my-website"
+                    rd /S /Q "C:\\deployment\\my-website"
                 )
-                mkdir "C:\\inetpub\\my-website"
-                xcopy /E /I /Y * "C:\\inetpub\\my-website\\"
+                mkdir "C:\\deployment\\my-website"
+                xcopy /E /I /Y * "C:\\deployment\\my-website\\"
                 '''
             }
         }
