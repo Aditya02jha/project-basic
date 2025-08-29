@@ -35,11 +35,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                if [ -d "/var/www/myapp" ]; then
-                    rm -rf "/var/www/myapp"
+                if [ -d "/var/www/project-basic" ]; then
+                    rm -rf "/var/www/project-basic"
                 fi
-                mkdir -p "/var/www/myapp"
-                cp -r * "/var/www/myapp"
+                mkdir -p "/var/www/project-basic"
+                cp -r * "/var/www/project-basic"
                 '''
             }
         }
