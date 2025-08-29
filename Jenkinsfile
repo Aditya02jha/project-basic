@@ -36,10 +36,10 @@ pipeline {
             steps {
                 sh '''
                 if [ -d "/var/www/project-basic" ]; then
-                    rm -rf "/var/www/project-basic"
+                    sudo rm -rf "/var/www/project-basic"
                 fi
-                mkdir -p "/var/www/project-basic"
-                cp -r * "/var/www/project-basic"
+                sudo mkdir -p "/var/www/project-basic"
+                sudo cp -r * "/var/www/project-basic"
                 '''
             }
         }
